@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+//To ensure that all components share the same count value, we need to remove the local count state from Counter.jsx and use the state passed as props from App.jsx.
+const Counter = ({ count, increment, decrement }) => {
+  //const [count, setCount] = useState(0);
 
-  const decrement = () => setCount((prevCount) => prevCount - 1);
-  const increment = () => setCount((prevCount) => prevCount + 1);
+  //const decrement = () => setCount((prevCount) => prevCount - 1);
+  //const increment = () => setCount((prevCount) => prevCount + 1);
 
   return (
     <div className="counter-container">
